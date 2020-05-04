@@ -2036,9 +2036,9 @@ function webViewerUpdateViewarea(evt) {
     })["catch"](function () {});
   }
 
-  var href = PDFViewerApplication.pdfLinkService.getAnchorUrl(location.pdfOpenParams);
-  PDFViewerApplication.appConfig.toolbar.viewBookmark.href = href;
-  PDFViewerApplication.appConfig.secondaryToolbar.viewBookmarkButton.href = href;
+  // var href = PDFViewerApplication.pdfLinkService.getAnchorUrl(location.pdfOpenParams);
+  // PDFViewerApplication.appConfig.toolbar.viewBookmark.href = href;
+  // PDFViewerApplication.appConfig.secondaryToolbar.viewBookmarkButton.href = href;
   var currentPage = PDFViewerApplication.pdfViewer.getPageView(PDFViewerApplication.page - 1);
   var loading = currentPage.renderingState !== _pdf_rendering_queue.RenderingStates.FINISHED;
   PDFViewerApplication.toolbar.updateLoadingIndicatorState(loading);
@@ -13375,21 +13375,21 @@ function () {
           source: self
         });
       });
-      items.openFile.addEventListener('click', function () {
-        eventBus.dispatch('openfile', {
-          source: self
-        });
-      });
-      items.print.addEventListener('click', function () {
-        eventBus.dispatch('print', {
-          source: self
-        });
-      });
-      items.download.addEventListener('click', function () {
-        eventBus.dispatch('download', {
-          source: self
-        });
-      });
+      // items.openFile.addEventListener('click', function () {
+      //   eventBus.dispatch('openfile', {
+      //     source: self
+      //   });
+      // });
+      // items.print.addEventListener('click', function () {
+      //   eventBus.dispatch('print', {
+      //     source: self
+      //   });
+      // });
+      // items.download.addEventListener('click', function () {
+      //   eventBus.dispatch('download', {
+      //     source: self
+      //   });
+      // });
       items.scaleSelect.oncontextmenu = _ui_utils.noContextMenuHandler;
       eventBus.on('localized', function () {
         _this._localized();
